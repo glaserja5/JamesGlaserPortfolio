@@ -1,0 +1,177 @@
+/* 1. Variables & Reset */
+:root {
+    --color-primary: #D35400;  /* Pumpkin Orange */
+    --color-accent:  #16A085;  /* Tropical Teal */
+    --color-light:   #FDFEFE;  /* Off-White */
+    --color-dark:    #2C3E50;  /* Blue-Gray */
+  }
+  
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  /* 2. Typography */
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-dark);
+    background: #fafafa;
+    line-height: 1.6;
+  }
+  h1 { font-size: 2rem; margin-bottom: 0.5rem; font-weight: 700; }
+  h2 { font-size: 1.6rem; margin-bottom: 1rem; font-weight: 600; }
+  h3 { font-size: 1.25rem; color: var(--color-primary); margin-bottom: 0.5rem; }
+  h1, h2, h3 { font-family: 'Inter', sans-serif; }
+  
+  /* 3. Layout */
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  
+  /* 4. Links */
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+  
+  /* 5. Projects Grid & Cards */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  /* Remove or comment out the 2-column media query entirely */
+  @media (min-width: 600px) {
+    /* .projects-grid { grid-template-columns: repeat(2, 1fr); } */
+  }
+  
+
+  .project {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .project p + p {
+    margin-top: 0.5rem;
+  }
+  
+  /* 6. Responsive Images & Embeds */
+  img, iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  /* 7. Footer */
+  footer p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  #projects h2 {
+    text-align: center;
+    margin-bottom: 1.5rem; 
+  }
+
+  .project:hover {
+    /* light grey background on hover */
+    background-color: #f5f5f5;
+    /* if you’re using your --color-light variable, you can do: */
+    /* background-color: var(--color-light); */
+  
+    /* keep your lift effect too, if desired */
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+  
+/* Header container */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;      /* or your main container width */
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+  }
+  
+  /* Left side */
+  .header-left h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .header-left .subtitle {
+    font-size: 1rem;
+    color: var(--color-dark);
+    margin: 0.25rem 0 0;
+  }
+  
+  /* Right side */
+  .header-right p {
+    margin: 0;
+    font-size: 0.9rem;
+    text-align: right;
+    line-height: 1.4;
+  }
+  .header-right p strong {
+    font-weight: 600;
+  }
+  .header-right p a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  .header-right p a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Separator styling */
+  .separator {
+    margin: 0 0.5rem;
+    color: var(--color-primary);
+  }
+  
+  /* (Optional) Re-include your top-bar pseudo-element if you had one */
+  header {
+    position: relative;
+    background: var(--color-light);
+  }
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 8px;
+    background-color: rgba(211, 84, 0, 0.5);
+    pointer-events: none;
+  }
+
+  /* 7. Footer */
+footer {
+    background: var(--color-light);
+    border-top: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;  /* centers the text */
+  }
+  footer p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+  }
+  footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
